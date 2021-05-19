@@ -1,0 +1,15 @@
+#!/bin/bash
+#BSUB -J test_neat_ms # Job name
+#BSUB -P acc_pandeg01a # allocation account
+#BSUB -q gpu # queue
+#BSUB -n 1 # number of compute cores
+#BSUB -W 2:00 # walltime in HH:MM
+#BSUB -R rusage[mem=8000] # 8 GB of memory requested
+#BSUB -o test_neat_ms.stdout
+#BSUB -eo test_neat_ms.stderr
+#BSUB -L /bin/bash
+module purge
+module load anaconda3
+module load cuda
+source activate tfGPU
+python test_neatms.py
