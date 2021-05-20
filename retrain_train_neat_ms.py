@@ -2,12 +2,12 @@ import NeatMS as ntms
 
 raw_data_folder_path = './data/test_data/mzML/'
 # Using peaks that have been aligned across samples
-# feature_table_path = './data/test_data/aligned_features.csv'
+feature_table_path = './data/test_data/aligned_features.csv'
 # Using unaligned peaks (One individual peak table for each sample)
-feature_table_path = '../data/test_data/unaligned_features/'
+# feature_table_path = '../data/test_data/unaligned_features/'
 # This is important for NeatMS to read the feature table correctly
-# input_data = 'mzmine'
-input_data = 'xcms'
+input_data = 'mzmine'
+# input_data = 'xcms'
 
 experiment = ntms.Experiment(raw_data_folder_path, feature_table_path, input_data)
 
