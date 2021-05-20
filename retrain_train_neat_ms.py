@@ -28,6 +28,7 @@ for size, count in c.most_common():
     print("   of size %2d : %6d" % (size, count))
 print("        total : %6d" % len(exp.feature_tables[0].feature_collection_list))
 nn_handler = ntms.NN_handler(experiment)
+nn_handler.create_batches(validation_split=0.1, normalise_class=False)
 
 model_path = "./data/model/neatms_default_model.h5"
 nn_handler.create_model(model = model_path)
