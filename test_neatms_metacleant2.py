@@ -7,7 +7,7 @@ feature_table_path = base_path + 'refined_unaligned_feature_table.csv'
 # Using unaligned peaks (One individual peak table for each sample)
 # feature_table_path = '../data/test_data/unaligned_features/'
 # This is important for NeatMS to read the feature table correctly
-input_data = 'mzML'
+input_data = 'xcms'
 
 experiment = ntms.Experiment(raw_data_folder_path, feature_table_path, input_data)
 
